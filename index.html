@@ -24,11 +24,20 @@
         </a>
         <nav class="header__nav" id="headerNav">
           <ul>
-            <li><a href="#services">Services</a></li>
+            <li class="has-dropdown">
+              <a href="#services">Services <span class="dropdown-arrow">▾</span></a>
+              <ul class="header__dropdown">
+                <li><a href="construction-neuve.html">Construction neuve</a></li>
+                <li><a href="renovation.html">Rénovation</a></li>
+                <li><a href="extension-agrandissement.html">Extension</a></li>
+                <li><a href="gros-oeuvre.html">Gros œuvre</a></li>
+                <li><a href="dordogne.html">Zone Dordogne</a></li>
+              </ul>
+            </li>
             <li><a href="#realisations">Réalisations</a></li>
-            <li><a href="#apropos">À propos</a></li>
+            <li><a href="apropos.html">À propos</a></li>
             <li><a href="#temoignages">Témoignages</a></li>
-            <li><a href="#contact" class="header__cta">Contactez-nous</a></li>
+            <li><a href="contact.html" class="header__cta">Contact</a></li>
           </ul>
         </nav>
         <button class="header__toggle" id="mobileToggle" aria-label="Menu">
@@ -73,6 +82,127 @@
     <div class="hero__scroll">
       <span>Scroll</span>
       <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== ANIMATIONS BTP ========== -->
+  <section class="btp-scenes">
+    <div class="btp-scenes__inner">
+
+      <!-- SCÈNE 1 : Poseur de briques -->
+      <div class="btp-scene">
+        <svg class="scene-svg" viewBox="0 0 260 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sol -->
+          <line x1="0" y1="170" x2="260" y2="170" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+          <!-- MUR — rangée 1 (bas) -->
+          <rect x="12" y="154" width="28" height="14" rx="2" fill="#ff5710" opacity="0.9"/>
+          <rect x="44" y="154" width="28" height="14" rx="2" fill="#ff5710" opacity="0.9"/>
+          <rect x="76" y="154" width="28" height="14" rx="2" fill="#ff5710" opacity="0.9"/>
+          <rect x="108" y="154" width="28" height="14" rx="2" fill="#ff5710" opacity="0.9"/>
+          <!-- Rangée 2 -->
+          <rect x="28" y="138" width="28" height="14" rx="2" fill="#ff5710" opacity="0.72"/>
+          <rect x="60" y="138" width="28" height="14" rx="2" fill="#ff5710" opacity="0.72"/>
+          <rect x="92" y="138" width="28" height="14" rx="2" fill="#ff5710" opacity="0.72"/>
+          <!-- Rangée 3 — briques animées -->
+          <rect x="12" y="122" width="28" height="14" rx="2" fill="#ff5710" class="brick-appear b1"/>
+          <rect x="44" y="122" width="28" height="14" rx="2" fill="#ff5710" class="brick-appear b2"/>
+          <rect x="76" y="122" width="28" height="14" rx="2" fill="#ff5710" class="brick-appear b3"/>
+
+          <!-- PERSONNAGE — jambes statiques -->
+          <line x1="195" y1="150" x2="184" y2="170" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="195" y1="150" x2="206" y2="170" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+
+          <!-- Corps supérieur animé (pivot aux hanches) -->
+          <g class="bricklayer-upper">
+            <line x1="195" y1="114" x2="195" y2="150" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="195" cy="104" r="9" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.04)"/>
+            <!-- Casque de chantier -->
+            <path d="M186 105 Q195 93 204 105" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Bras arrière -->
+            <line x1="195" y1="124" x2="212" y2="142" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <!-- Bras truelle (vers le mur) -->
+            <line x1="195" y1="124" x2="155" y2="136" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <!-- Truelle -->
+            <path d="M147 132 L159 128 L161 136 L149 140 Z" fill="rgba(255,255,255,0.65)"/>
+          </g>
+
+          <!-- Poussière de mortier -->
+          <circle class="dust dust1" cx="148" cy="121" r="2" fill="rgba(255,255,255,0.25)"/>
+          <circle class="dust dust2" cx="143" cy="116" r="1.5" fill="rgba(255,255,255,0.2)"/>
+          <circle class="dust dust3" cx="151" cy="113" r="1" fill="rgba(255,255,255,0.15)"/>
+        </svg>
+        <span class="btp-label">Maçonnerie &amp; briquetage</span>
+      </div>
+
+      <!-- SCÈNE 2 : Bétonnière -->
+      <div class="btp-scene">
+        <svg class="scene-svg" viewBox="0 0 260 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="drum-clip">
+              <ellipse cx="160" cy="88" rx="31" ry="23"/>
+            </clipPath>
+          </defs>
+
+          <!-- Sol -->
+          <line x1="0" y1="170" x2="260" y2="170" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+          <!-- Tas de sable -->
+          <path d="M15 170 Q48 148 81 170 Z" fill="#c49a3c" opacity="0.45"/>
+          <ellipse cx="48" cy="170" rx="33" ry="5" fill="#c49a3c" opacity="0.3"/>
+
+          <!-- BÉTONNIÈRE — cadre -->
+          <line x1="145" y1="170" x2="130" y2="136" stroke="rgba(255,255,255,0.5)" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="178" y1="170" x2="193" y2="136" stroke="rgba(255,255,255,0.5)" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="130" y1="152" x2="193" y2="152" stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-linecap="round"/>
+          <!-- Roues -->
+          <circle cx="143" cy="170" r="7" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="rgba(255,255,255,0.04)"/>
+          <circle cx="180" cy="170" r="7" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="rgba(255,255,255,0.04)"/>
+          <!-- Axe vers le tambour -->
+          <line x1="160" y1="132" x2="160" y2="112" stroke="rgba(255,255,255,0.35)" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Goulotte -->
+          <path d="M150 112 L138 138 L150 138" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+          <!-- TAMBOUR — contour fixe -->
+          <ellipse cx="160" cy="88" rx="32" ry="24" fill="rgba(28,28,28,0.85)" stroke="#ff5710" stroke-width="2"/>
+          <ellipse cx="160" cy="65" rx="14" ry="5" fill="rgba(255,87,16,0.12)" stroke="rgba(255,87,16,0.55)" stroke-width="1.5"/>
+
+          <!-- Ailettes rotatives à l'intérieur -->
+          <g class="drum-fins" clip-path="url(#drum-clip)">
+            <line x1="160" y1="65" x2="160" y2="111" stroke="rgba(255,87,16,0.6)" stroke-width="1.5"/>
+            <line x1="132" y1="75" x2="188" y2="101" stroke="rgba(255,87,16,0.6)" stroke-width="1.5"/>
+            <line x1="132" y1="101" x2="188" y2="75" stroke="rgba(255,87,16,0.6)" stroke-width="1.5"/>
+          </g>
+
+          <!-- Grains de sable qui tombent dans le tambour -->
+          <circle class="grain g1" cx="130" cy="55" r="2.5" fill="#c49a3c"/>
+          <circle class="grain g2" cx="137" cy="50" r="2" fill="#c49a3c"/>
+          <circle class="grain g3" cx="124" cy="62" r="1.5" fill="#c49a3c"/>
+          <circle class="grain g4" cx="133" cy="68" r="2" fill="#c49a3c"/>
+
+          <!-- PERSONNAGE — jambes statiques -->
+          <line x1="68" y1="150" x2="57" y2="170" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="68" y1="150" x2="79" y2="170" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Torse + tête (statiques) -->
+          <line x1="68" y1="114" x2="68" y2="150" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="68" cy="104" r="9" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.04)"/>
+          <!-- Casque -->
+          <path d="M59 105 Q68 93 77 105" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Bras arrière (statique) -->
+          <line x1="68" y1="124" x2="40" y2="145" stroke="white" stroke-width="2" stroke-linecap="round"/>
+
+          <!-- Groupe pelle animé (pivot à l'épaule) -->
+          <g class="shovel-group">
+            <line x1="68" y1="124" x2="118" y2="112" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <!-- Tête de pelle -->
+            <path d="M113 108 L124 106 L125 115 L114 117 Z" fill="rgba(255,255,255,0.65)"/>
+            <!-- Sable sur la pelle -->
+            <ellipse cx="119" cy="111" rx="6" ry="3" fill="#c49a3c" opacity="0.55" transform="rotate(-10 119 111)"/>
+          </g>
+        </svg>
+        <span class="btp-label">Bétonière &amp; gros œuvre</span>
+      </div>
+
     </div>
   </section>
 
@@ -333,19 +463,20 @@
         <div class="footer__col">
           <h4>Navigation</h4>
           <ul>
-            <li><a href="#services">Services</a></li>
             <li><a href="#realisations">Réalisations</a></li>
-            <li><a href="#apropos">À propos</a></li>
+            <li><a href="apropos.html">À propos</a></li>
             <li><a href="#temoignages">Témoignages</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h4>Services</h4>
           <ul>
-            <li><a href="#services">Construction neuve</a></li>
-            <li><a href="#services">Rénovation</a></li>
-            <li><a href="#services">Extension</a></li>
-            <li><a href="#services">Gros œuvre</a></li>
+            <li><a href="construction-neuve.html">Construction neuve</a></li>
+            <li><a href="renovation.html">Rénovation</a></li>
+            <li><a href="extension-agrandissement.html">Extension</a></li>
+            <li><a href="gros-oeuvre.html">Gros œuvre</a></li>
+            <li><a href="dordogne.html">Zone Dordogne</a></li>
           </ul>
         </div>
         <div class="footer__col">
@@ -353,7 +484,7 @@
           <ul>
             <li><a href="tel:+33553000000">05 53 XX XX XX</a></li>
             <li><a href="mailto:contact@patrick-peyriere.fr">contact@patrick-peyriere.fr</a></li>
-            <li><a href="#contact">Demander un devis</a></li>
+            <li><a href="contact.html">Demander un devis</a></li>
           </ul>
         </div>
       </div>

@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateHeader() {
     const scrollY = window.scrollY;
-    const heroH = document.getElementById('hero')?.offsetHeight || 0;
+    const heroH = document.getElementById('hero')?.offsetHeight || document.querySelector('.page-hero')?.offsetHeight || 0;
 
     if (scrollY > 60) {
       header.classList.add('--scrolled');
